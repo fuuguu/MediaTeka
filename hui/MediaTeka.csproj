@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E62E6B14-8CA5-4500-914E-3B8EA7D63E84}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>hui</RootNamespace>
+    <AssemblyName>hui</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Films.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Films.Designer.cs">
+      <DependentUpon>Films.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmsByActor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmsByActor.Designer.cs">
+      <DependentUpon>FilmsByActor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmsByAuthor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmsByAuthor.Designer.cs">
+      <DependentUpon>FilmsByAuthor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmsByGenre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmsByGenre.Designer.cs">
+      <DependentUpon>FilmsByGenre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmsByYear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmsByYear.Designer.cs">
+      <DependentUpon>FilmsByYear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FilmsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilmsTable.Designer.cs">
+      <DependentUpon>FilmsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Purchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase.Designer.cs">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tariffs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tariffs.Designer.cs">
+      <DependentUpon>Tariffs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TariffsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TariffsTable.Designer.cs">
+      <DependentUpon>TariffsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="МедиатекаDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>МедиатекаDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Films.resx">
+      <DependentUpon>Films.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmsByActor.resx">
+      <DependentUpon>FilmsByActor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmsByAuthor.resx">
+      <DependentUpon>FilmsByAuthor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmsByGenre.resx">
+      <DependentUpon>FilmsByGenre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmsByYear.resx">
+      <DependentUpon>FilmsByYear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FilmsTable.resx">
+      <DependentUpon>FilmsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Purchase.resx">
+      <DependentUpon>Purchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tariffs.resx">
+      <DependentUpon>Tariffs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TariffsTable.resx">
+      <DependentUpon>TariffsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="МедиатекаDataSet.xsc">
+      <DependentUpon>МедиатекаDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="МедиатекаDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>МедиатекаDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="МедиатекаDataSet.xss">
+      <DependentUpon>МедиатекаDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
